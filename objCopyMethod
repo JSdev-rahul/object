@@ -1,0 +1,20 @@
+const obj = {
+    id: '1',
+    name: "peter",
+    hobby: ['music', "dance"]
+}
+// const copyObj = obj
+// const copyObj = { ...obj }
+// const copyObj = Object.assign({}, obj)
+
+// ye tino uper level ki deep copy banate hai nested ki nhi 
+
+/****************************** */
+
+// nested ke liye Json.parse(json.stringfy())
+const copyObj = JSON.parse(JSON.stringify(obj))
+
+copyObj.name = "jhon"
+copyObj.hobby.push("song")
+console.log("original object", obj)
+console.log("copy object", copyObj)
